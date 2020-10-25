@@ -473,3 +473,12 @@ ul {
   width: 250px;
   margin: 0 auto;
 }
+
+@media (max-width: 991.98px) {
+  .portfolioContainer .portfolioTitle {
+    font-size: 1.5em;
+  }
+  .portfolioContainer .row .project {
+    margin-bottom: 55px;
+  }
+}

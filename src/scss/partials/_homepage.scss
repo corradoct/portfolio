@@ -1,0 +1,74 @@
+// Style Homepage
+
+.header {
+  color: $primaryTextColor;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .name {
+
+    h1 {
+      font-size: 6em;
+      margin: 0;
+    }
+  }
+
+  p {
+    font-size: 3em;
+    margin: 0;
+    color: $secondTextColor;
+  }
+
+  .link {
+
+    a {
+
+      i {
+        font-size: 2em;
+        padding: 10px;
+        color: $primaryTextColor;
+
+        &:hover {
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
+}
+
+// Mediaquery
+
+@media (max-width: 991.98px) {
+  .navigation nav {
+    top: 0;
+    left: 0;
+
+    ul {
+
+      li {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    font-size: .5em;
+  }
+
+  .navigation nav {
+
+    ul {
+
+      li {
+        font-size: 30px;
+        line-height: 20px;
+      }
+    }
+  }
+}

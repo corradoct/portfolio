@@ -1,0 +1,213 @@
+// Style menù
+
+.im-a-hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 300;
+  flex: 0 0 20px;
+  width: 35px;
+  fill: $primaryTextColorHsla;
+  border: 1px solid $secondTextColor;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+.navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 205;
+
+  &.open {
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+  }
+
+  #navigation-background {
+    width: 180vw;
+    height: 170vh;
+    position: fixed;
+    top: -70vh;
+    left: -50vw;
+    z-index: 210;
+    .morph-path {
+      fill: $secondBgColorHsla;
+      transition: fill 0.5s ease-in-out;
+    }
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    z-index: 220;
+
+    &.open {
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: 5px 50px;
+        line-height: 60px;
+        font-size: 40px;
+        margin: 20px 0;
+
+        a {
+          text-decoration: none;
+          color: $primaryTextColor;
+
+          span {
+            font-size: .5em;
+          }
+
+          &:hover {
+            background-color: $secondTextColorRgba;
+            border-radius: 5px;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Style close button
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  fill: none;
+  stroke: $secondTextColor;
+  animation: stroke 2.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 300;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  stroke-width: 5;
+  stroke: $primaryTextColor;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px;
+  cursor: pointer;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 29;
+  stroke-dashoffset: 29;
+  animation: stroke 1.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px;
+  }
+}
+
+// Style li animations
+
+.animate span {
+    display: inline-block;
+}
+.animate span:nth-of-type(2) {
+    animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+    animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+    animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+    animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+    animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+    animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+    animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+    animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+    animation-delay: .45s;
+}
+
+.animate span {
+    transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+    animation: revolveScale .4s forwards;
+}
+
+@keyframes revolveScale {
+    60% {
+        transform: translate(20px, 20px) rotate(30deg) scale(.3);
+    }
+
+    100% {
+        transform: translate(0) rotate(0) scale(1);
+        opacity: 1;
+    }
+}

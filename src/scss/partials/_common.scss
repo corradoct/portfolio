@@ -1,0 +1,17 @@
+// General rules
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+font-family: 'Indie Flower', cursive, sans-serif;
+background-color: $primaryBgColor;
+overflow: hidden;
+position: relative;
+}
+
+ul {
+  list-style-type: none;
+}

@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Indie Flower", cursive, sans-serif;
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.im-a-hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 300;
+  flex: 0 0 20px;
+  width: 35px;
+  fill: white;
+  border: 1px solid #8b0000;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.im-a-hamburger:hover {
+  transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+.navigation {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 205;
+}
+.navigation.open {
+  display: block;
+}
+.navigation .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+.navigation #navigation-background {
+  width: 180vw;
+  height: 170vh;
+  position: fixed;
+  top: -70vh;
+  left: -50vw;
+  z-index: 210;
+}
+.navigation #navigation-background .morph-path {
+  fill: rgba(69, 69, 69, 0.5);
+  transition: fill 0.5s ease-in-out;
+}
+.navigation nav {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  z-index: 220;
+}
+.navigation nav.open {
+  display: block;
+}
+.navigation nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation nav ul li {
+  padding: 5px 50px;
+  line-height: 60px;
+  font-size: 40px;
+  margin: 20px 0;
+}
+.navigation nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.navigation nav ul li a span {
+  font-size: 0.5em;
+}
+.navigation nav ul li a:hover {
+  background-color: darkred;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  fill: none;
+  stroke: #8b0000;
+  -webkit-animation: stroke 2.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+          animation: stroke 2.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 300;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  stroke-width: 5;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px;
+  cursor: pointer;
+  -webkit-animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+          animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 29;
+  stroke-dashoffset: 29;
+  -webkit-animation: stroke 1.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+          animation: stroke 1.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+.checkmark__check:hover {
+  transform: scale(1.3);
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@-webkit-keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px;
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px;
+  }
+}
+.animate span {
+  display: inline-block;
+}
+
+.animate span:nth-of-type(2) {
+  -webkit-animation-delay: 0.05s;
+          animation-delay: 0.05s;
+}
+
+.animate span:nth-of-type(3) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.animate span:nth-of-type(4) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+
+.animate span:nth-of-type(5) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.animate span:nth-of-type(6) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.animate span:nth-of-type(7) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.animate span:nth-of-type(8) {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+.animate span:nth-of-type(9) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.animate span:nth-of-type(10) {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+.animate span {
+  transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+  -webkit-animation: revolveScale 0.4s forwards;
+          animation: revolveScale 0.4s forwards;
+}
+
+@-webkit-keyframes revolveScale {
+  60% {
+    transform: translate(20px, 20px) rotate(30deg) scale(0.3);
+  }
+  100% {
+    transform: translate(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes revolveScale {
+  60% {
+    transform: translate(20px, 20px) rotate(30deg) scale(0.3);
+  }
+  100% {
+    transform: translate(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+.header {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .name h1 {
+  font-size: 6em;
+  margin: 0;
+}
+.header p {
+  font-size: 3em;
+  margin: 0;
+  color: #8b0000;
+}
+.header .link {
+  text-align: center;
+}
+.header .link a i {
+  font-size: 2em;
+  padding: 10px;
+  color: #fff;
+}
+.header .link a i:hover {
+  transform: scale(1.4);
+}

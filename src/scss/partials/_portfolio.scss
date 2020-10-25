@@ -1,0 +1,65 @@
+.portfolioContainer {
+  width: 100%;
+  height: 100vh;
+  color: $primaryTextColor;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+
+  span {
+    color: $secondTextColor;
+  }
+
+  .portfolioTitle {
+    padding: 20px 0;
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+    .project {
+      border: 1px dashed $secondTextColor;
+      border-radius: 10px;
+      padding: 15px;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      h2 {
+        color: $secondTextColor;
+        padding: 20px 0;
+      }
+
+      .img {
+        height: 200px;
+
+        img {
+          height: 100%;
+        }
+      }
+      .links {
+        padding: 40px 0;
+
+        a {
+          color: $primaryTextColor;
+          text-decoration: none;
+          padding: 20px;
+          font-size: 1.3em;
+        }
+      }
+      .text {
+        font-size: 1.2em;
+        width: 250px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

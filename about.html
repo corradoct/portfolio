@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>About me</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="dist/css/app.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+  </head>
+  <body class="scroll">
+
+    <!-- Burgermenu button -->
+    <div class="burgerMenu">
+      <svg viewBox="0 0 100 80" class="im-a-hamburger">
+        <rect y="5" width="100" height="15"></rect>
+        <rect y="35" width="100" height="15"></rect>
+        <rect y="65" width="100" height="15"></rect>
+      </svg>
+    </div>
+    <!-- End burgermenu button -->
+
+    <!-- Closebutton -->
+    <div class="closeMenu">
+      <svg id="close" class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+        <path class="checkmark__check" fill="none" d="M16 16 36 36 M36 16 16 36" />
+      </svg>
+    </div>
+    <!-- End closebutton -->
+
+    <!-- Nav -->
+    <div class="navigation">
+      <div class="overlay"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" id="navigation-background"><path class="a morph-path" d="M1694.17,69.11c-21.15,46.26-57.31,104.06-118,123-36,11.22-57.7,1.67-115-2-89.29-5.71-118,12.26-213,21-104.64,9.63-124.51-7.14-234-8-98.87-.77-238-1.86-366,60-154.3,74.55-131.59,162.75-270,216-133.46,51.34-315.11,31.11-364-60-39.85-74.25,18.49-176.94,35-206C234-112.21,1335,19.57,1694.17,69.11Z"/></svg>
+      <nav>
+        <ul class="animate">
+          <li data-item="home"><a href="index.html"> <span>H</span> <span>o</span> <span>m</span> <span>e</span> </a></li>
+          <li data-item="about"><a href="about.html"> <span>A</span> <span>b</span> <span>o</span> <span>u</span> <span>t</span> <span> </span> <span>m</span> <span>e</span>  </a></li>
+          <li data-item="contact"><a href="portfolio.html"><span>P</span> <span>o</span> <span>r</span> <span>t</span> <span>f</span> <span>o</span> <span>l</span> <span>i</span> <span>o</span>  </a></li>
+          <li data-item="dance"><a href="contact.html"><span>C</span> <span>o</span> <span>n</span> <span>t</span> <span>a</span> <span>c</span> <span>t</span> </a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- End nav -->
+
+    <div class="container">
+      <div class="row title">
+        <h1>Nice to meet you !</h1>
+      </div>
+
+      <div class="row up">
+        <div class="image">
+          <img src="src/img/myImage.png" alt="My image">
+        </div>
+
+        <div class="col desc">
+          <p class="cit">"Choose a job you love and you will never have to work a day in your life."<br> <span>Confucio</span> </p>
+          <p>This is the quote that best represents me, I'm not a Web Developer for work but for passion.
+            I am always hungry for new knowledge and new challenges.
+            I love working as a team and celebrating the achievements with my colleagues.
+          </p>
+        </div>
+
+        <div class="col tech">
+          <h2>Key competences</h2>
+          <ul>
+            <li> <span> Used technologies : </span> HTML, SASS, JQuery, PHP, MySQL e Laravel.</li>
+            <li> <span> Languages : </span> HTML5, CSS3 (SCSS), JavaScript, MySQL, PHP.</li>
+            <li> <span> Framework CSS : </span> Bootstrap 3/4</li>
+            <li> <span> Javascript Libraries : </span> jQuery, Chart.js, Moment.js, Handlebars, Vue.js</li>
+            <li> <span> Framework PHP : </span> Laravel</li>
+            <li> <span> CMS : </span> Wordpress</li>
+            <li> <span> Versioning system : </span> GIT</li>
+            <li>Linux System Administrator</li>
+            <li>REST API</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row down">
+        <div class="col esp">
+          <h2>Junior Full Stack Web Developer Trainee</h2>
+          <h3>Boolean Careers</h3>
+          <p>During these months of the course, I made projects inspired by
+            Whatsapp web, Spotify, Netflix, Digital Ocean and many others ...
+            In the morning I had online lessons and in the afternoon I
+            practiced what I had studied.
+            I had to create projects and I had goals and deadlines to meet.
+            Sometimes I worked with a team.
+            It was an experience very close to real working life.
+          </p>
+        </div>
+
+        <div class="col esp">
+          <h2>Warehouse manager</h2>
+          <h3>Euro Markisen Gmbh</h3>
+          <p>I was in charge of managing the spare parts warehouse and
+            internal billing and inventory software
+            I managed customer relations and a team of colleagues.
+          </p>
+        </div>
+
+        <div class="col esp">
+          <h2>Junior Web Developer</h2>
+          <h3>Your Inspiration</h3>
+          <p>During these months I have collaborated in the test of many
+            Woocommerce plugins created by my colleagues
+            (https://yithemes.com/) and in the creation and translation into
+            English of the documentations.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <!-- Script js -->
+  <script type="text/javascript" src="dist/js/app.js"></script>
+</html>

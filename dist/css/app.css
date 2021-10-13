@@ -357,6 +357,7 @@ ul {
 }
 .container .row.down .esp {
   width: 500px;
+  margin-right: 10px;
 }
 
 @media (max-width: 991.98px) {
